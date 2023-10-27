@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Doctor Diagnosis</title>
+    <link rel="stylesheet" href="index2.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>HackThon Project</h2>
+        <button class="button">Sign-In</button>
+    </div>
+
+    <div class="sidebar">
+        <h2>Introduction</h2>
+        <br>
+        <p> Introducing HealthBot, your personalized health and wellness companion! We understand that maintaining a
+            healthy lifestyle can sometimes be a daunting task, but with HealthBot, you now have a dedicated partner to
+            guide you on your journey to optimal well-being. Whether you're looking to improve your fitness, manage a
+            specific health condition, or simply seek advice on maintaining a balanced and wholesome life, HealthBot is
+            here to provide expert information and support 24/7. Our advanced AI technology is designed to empower you
+            with the knowledge and tools you need to make informed decisions about your health, all in the comfort of
+            your digital domain. Welcome to a new era of healthcare, where HealthBot is your trusted ally on the path to
+            a healthier, happier you.</p>
+    </div>
+
+    <div class="content">
+        <p>Doctor Diagnosis</p>
+        <button class="my-button"></i>>Talk to me.</button>
+        <div id="output"></div>
+        <script>
+            document.getElementById("run-python").addEventListener("click", function () {
+                fetch('/Dr. Diagnosis.py')
+                    .then(response => response.text())
+                    .then(data => document.getElementById("output").innerHTML = data);
+            });
+        </script>
+    </div>
+</body>
+
+</html>
